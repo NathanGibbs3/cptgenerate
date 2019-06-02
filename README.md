@@ -41,7 +41,7 @@ execution dir.
 1. Location of Master Test Set ( defaults to tests/php );
 1. Location of Test Build ( defaults to tests/PhpUnit );
 
-   If set to "multi" will search for multiple Test Set locations
+   If set to "multi" will search for multiple Test set locations
    formated as tests/phpX.X
 
    Dir | Namespace | Typehint
@@ -55,16 +55,17 @@ execution dir.
 # Usage Examples:
 Command|Master Tests|Generated Tests
 ---|---|---
-`php -f ./tests/phptestgen.php` | Located in ./tests/php | Located in ./tests/PhpUnit
-`php -f ./tests/phptestgen.php LocA` | Located in ./tests/LocA | Located in ./tests/PhpUnit
-`php -f ./tests/phptestgen.php LocA LocB` | Located in ./tests/LocA | Located in ./tests/LocB
-`php -f ./tests/phptestgen.php LocA multi` | Located in ./tests/LocA | Located in ./tests/php*.* with customizations.
+`php -f ./tests/phptestgen.php` | In ./tests/php | In ./tests/PhpUnit
+`php -f ./tests/phptestgen.php LocA` | In ./tests/LocA | In ./tests/PhpUnit
+`php -f ./tests/phptestgen.php LocA LocB` | In ./tests/LocA | In ./tests/LocB
+`php -f ./tests/phptestgen.php LocA multi` | In ./tests/LocA | In ./tests/php*.* with customizations.
 
-Any of the above with a PHPUnit version specified as X.Y.Z will write
-files in locations above with customization.
+With a PHPUnit version specified as ( X.Y.Z ), the above examples will
+generate customized tests.
 
 PHPUnit Version | Namespace | Typehint
 ---|---|---
+0.0.0 default value when not specified | Yes | No
 < 4.8.28 | No | No
 4.8.28+ to < 7.0 | Yes | No
 7.0+ | Yes | Yes
