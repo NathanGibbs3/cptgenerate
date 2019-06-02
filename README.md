@@ -40,11 +40,16 @@ execution dir.
 ## Options:
 1. Location of Master Test Set ( defaults to tests/php );
 1. Location of Test Build ( defaults to tests/PhpUnit );
-	If option is set to "multi" will search for multiple Test Set locations
-	formated as tests/phpX.X
-	Dir tests/php5.2 = Tests built as Non-Ns Non-Th
-	Dir tests/php7.1 = Tests built as Ns Th
-	Anything else defaults to Ns Non-Th
+
+   If set to "multi" will search for multiple Test Set locations
+   formated as tests/phpX.X
+
+   Dir | Namespace | Typehint
+   ---|---|---
+   tests/php5.2 | No | No
+   tests/php7.1 | Yes | Yes
+   tests/php*.* | Yes | No
+
 1. PHPUnit Version ( defaults to 0.0.0 )
 
 # Usage Examples:
@@ -60,9 +65,9 @@ files in locations above with customization.
 
 PHPUnit Version | Namespace | Typehint
 ---|---|---
-< 4.8.28 | No | No.
-> 4.8.28 and < 7.0 | Yes | NO
->= 7.0 | Yes | Yes
+< 4.8.28 | No | No
+4.8.28+ to < 7.0 | Yes | No
+7.0+ | Yes | Yes
 
 # Related Software
 [PHPUnit](https://github.com/sebastianbergmann/phpunit) by
