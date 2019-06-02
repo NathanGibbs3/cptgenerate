@@ -26,7 +26,7 @@ if ($debug > 0) {
 }
 
 // Set defaults.
-$Ver = '0.0.1'; // Release Version
+$Ver = '0.0.2'; // Release Version
 $Mts = 'tests/php'; // Master Test Set
 $tsl = array("$BD/tests/PhpUnit"); // Test Set Build List
 $PHPUV = '0.0.0'; // PHP Unit Ver.
@@ -90,6 +90,21 @@ if ($tfl == NULL) {
 			$TgNs = 1;
 			$TgTh = 0;
 			print " Build Test Set: $gts\n";
+			// Clean Old Tests form dir.
+			$ots = testfiles("$gts");
+			if ($ots != NULL) {
+				foreach($ots as $otf){ // Process Test files.
+					$otfn = "$gts/$otf";
+					if ( $Testing == 0 ) {
+						if ($debug > 0) {
+							print "Delete old test: $otfn\n";
+						}
+						unlink ($otfn);
+					}else{
+						print "Would delete old test: $otfn\n";
+					}
+				}
+			}
 			if ( $PHPUV == '0.0.0' ){
 				if(preg_match("/tests\/php5.2/", $gts)) {
 					$TgNs = 0;
