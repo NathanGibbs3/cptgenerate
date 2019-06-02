@@ -22,16 +22,16 @@ in each Unit test set was identical.
 
 ## The differnences between each test set were:
 1. Class defines.
-  1. Namespaced.
-  1. Non-Namespaced.
+   1. Namespaced.
+   1. Non-Namespaced.
 1. Test fixture defines.
-  1. Typehinted.
-  1. Non-Typehinted.
+   1. Typehinted.
+   1. Non-Typehinted.
 
 ## The solution:
 `cptgenerate` which builds, from a master set of PHPUnit tests, a set of tests
-compatible with the PHPUnit version used in the test environment.  
-Basically, **JIT PHPUnit Test generation.**
+compatible with the PHPUnit version used in the test environment. Basically,
+**JIT PHPUnit Test generation.**
 
 # Usage:
 Command Line Options are space sepearated. All locations are relative to
@@ -55,11 +55,15 @@ Command|Master Tests|Generated Tests
 `php -f ./tests/phptestgen.php LocA LocB` | Located in ./tests/LocA | Located in ./tests/LocB
 `php -f ./tests/phptestgen.php LocA multi` | Located in ./tests/LocA | Located in ./tests/php*.* with customizations.
 
-Any of the above with an additional PHPUnit option given as X.Y.Z will write
-files as specified above with customization.
-When PHPUnit version is <  4.8.28, tests built as Non-Ns Non-Th.
-When PHPUnit vesrion is between, tests built as Ns Non-Th.
-When PHPUnit version is >= 7.0, tests built as Ns Th.
+Any of the above with a PHPUnit version specified as X.Y.Z will write
+files in locations above with customization.
+
+PHPUnit Version | Namespace | Typehint
+---|---|---
+< 4.8.28 | No | No.
+> 4.8.28 and < 7.0 | Yes | NO
+>= 7.0 | Yes | Yes
 
 # Related Software
-[PHPUNIT](https://github.com/sebastianbergmann/phpunit) by @sebastianbergmann
+[PHPUnit](https://github.com/sebastianbergmann/phpunit) by
+[@sebastianbergmann](https://github.com/sebastianbergmann)
