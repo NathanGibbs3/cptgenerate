@@ -3,7 +3,10 @@ All notable changes to this project will be documented in this file using the
 [Keep a CHANGELOG](http://keepachangelog.com) principles.
 
 ## [Unreleased]
-### Fixing
+
+## [0.0.3] - 2019-06-07
+### Added travis-ci support to Github Repo.
+### Fixed
 - Issue #3 PHP 5.2x Compatibility.
 
 ## [0.0.2] - 2019-06-02

@@ -26,7 +26,7 @@ if ($debug > 0) {
 }
 
 // Set defaults.
-$Ver = '0.0.2'; // Release Version
+$Ver = '0.0.3'; // Release Version
 $Mts = 'tests/php'; // Master Test Set
 $tsl = array("$BD/tests/PhpUnit"); // Test Set Build List
 $PHPUV = '0.0.0'; // PHP Unit Ver.
