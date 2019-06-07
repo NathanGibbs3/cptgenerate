@@ -1,0 +1,52 @@
+---
+language: php
+
+# branch blocklist
+branches:
+  except:
+    - documentation
+    - gh-ops
+
+# Default matrix overlay.
+matrix:
+  include:
+    - php: 5.2
+      dist: precise
+    - php: 5.3
+      dist: precise
+    - php: 5.4
+    - php: 5.5
+    - php: 5.6
+    - php: 7.0
+    - php: 7.1
+    - php: 7.2
+    - php: 7.3
+    - php: nightly
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+    - /tmp/pear/cache
+
+notifications:
+  webhooks: https://coveralls.io/webhook
+
+before_install:
+  - sudo apt-get update > /dev/null
+  # Where to look if installed modules in PHP don't work. :-)
+  # Like xdebug on PHP 5.2
+  - php --ini
+  # What modules are actually installed
+  - php -m
+  - php -i
+
+install:
+
+before_script:
+
+script:
+  - ./cptgenerate
+
+after_success:
+
+...
