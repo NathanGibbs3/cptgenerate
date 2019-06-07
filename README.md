@@ -57,7 +57,7 @@ execution dir.
 
 1. PHPUnit Version ( defaults to 0.0.0 )
 
-# Usage Examples:
+## Examples:
 Command|Master Tests|Generated Tests
 ---|---|---
 `php -f ./tests/phptestgen.php` | In ./tests/php | In ./tests/PhpUnit
