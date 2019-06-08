@@ -1,9 +1,14 @@
-# cptgenerate -- JIT PHPUnit Test Generation
+<!--README.md file for Github Repo-->
+# cptgenerate -- JIT PHPUnit Test Generation [![Build Status](https://travis-ci.com/NathanGibbs3/cptgenerate.svg?branch=master)](https://travis-ci.com/NathanGibbs3/cptgenerate)
 Build Unit tests for diverse PHPUnit versions from a master set of PHPUnit
 tests.
 
 Generates a single set of Unit tests based on supplied PHPUnit version or
 multiple test sets that can be run by PHPUnit based on installed PHP version.
+
+## Build Status
+master [![Build Status](https://travis-ci.com/NathanGibbs3/cptgenerate.svg?branch=master)](https://travis-ci.com/NathanGibbs3/cptgenerate)
+devel [![Build Status](https://travis-ci.com/NathanGibbs3/cptgenerate.svg?branch=devel)](https://travis-ci.com/NathanGibbs3/cptgenerate)
 
 ## This project enables developers to:
 1. Build with all default PHP Major.Minor versions available on travis-ci.
@@ -52,7 +57,7 @@ execution dir.
 
 1. PHPUnit Version ( defaults to 0.0.0 )
 
-# Usage Examples:
+## Examples:
 Command|Master Tests|Generated Tests
 ---|---|---
 `php -f ./tests/phptestgen.php` | In ./tests/php | In ./tests/PhpUnit

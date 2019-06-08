@@ -5,7 +5,8 @@ All notable changes to this project will be documented in this file using the
 ## [Unreleased]
 
 ## [0.0.3] - 2019-06-07
-### Added travis-ci support to Github Repo.
+### Added
+- travis-ci support to Github Repo.
 ### Fixed
 - Issue #3 PHP 5.2x Compatibility.
 
