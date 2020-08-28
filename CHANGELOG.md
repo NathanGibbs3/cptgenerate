@@ -7,6 +7,13 @@ All notable changes to this project will be documented in this file using the
 - Fix PHP 7x compatibility issue introduced in 0.0.3.
   In unexecuted code path now, but in the future...?
 
+## [0.0.4] - 2020-08-28
+### Added
+- Fix PHP 7x compatibility issue introduced in 0.0.3.
+  In unexecuted code path now, but in the future...?
+### Fixed
+- CI build breakage.
+
 ## [0.0.3] - 2019-06-07
 ### Added
 - travis-ci support to Github Repo.
