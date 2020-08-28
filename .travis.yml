@@ -15,12 +15,15 @@ matrix:
     - php: 5.3
       dist: precise
     - php: 5.4
+      dist: trusty
     - php: 5.5
+      dist: trusty
     - php: 5.6
     - php: 7.0
     - php: 7.1
     - php: 7.2
     - php: 7.3
+    - php: 7.4
     - php: nightly
 
 cache:
@@ -32,7 +35,7 @@ notifications:
   webhooks: https://coveralls.io/webhook
 
 before_install:
-  - sudo apt-get update > /dev/null
+  # - sudo apt-get update > /dev/null
   # Where to look if installed modules in PHP don't work. :-)
   # Like xdebug on PHP 5.2
   - php --ini
