@@ -3,9 +3,6 @@ All notable changes to this project will be documented in this file using the
 [Keep a CHANGELOG](http://keepachangelog.com) principles.
 
 ## [Unreleased]
-### Added
-- Fix PHP 7x compatibility issue introduced in 0.0.3.
-  In unexecuted code path now, but in the future...?
 
 ## [0.0.4] - 2020-08-28
 ### Added
